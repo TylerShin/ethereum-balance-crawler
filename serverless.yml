@@ -1,0 +1,22 @@
+service: ethereum-balance-crawler
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+package:
+  artifact: dst.zip
+
+functions:
+  getEtherBalance:
+    handler: handler.getEtherBalance
+    timeout: 10
+    events:
+      - http:
+          path: getEtherBalance
+          method: get
+
+resources:
+  Resources:
+    GetEtherBalanceLogGroup:
+      Properties:
+        RetentionInDays: "30"
