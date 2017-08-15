@@ -1,2 +1,2 @@
-# medium-latest-post-getter
-Medium user's latest post getter
+# ethereum-balance-crawler
+ethereum-balance-crawler
